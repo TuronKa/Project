@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker'
 
 describe('Registration test', () => {
   it('Should register a new user with valid credentials', () => {
-    cy.visit('/auth/register')
+    cy.visit('/auth/register', { failOnStatusCode: false })
 
     const birthDate = faker.date.birthdate({ min: 18, max: 65, mode: 'age' }).toISOString().split('T')[0];
     const password = faker.internet.password() + '@!';

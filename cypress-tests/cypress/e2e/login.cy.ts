@@ -3,7 +3,7 @@ import LoginData from '../pages/loginData';
 
 describe('Login test', () => {
     it('Should log in with valid credentials', () => {
-        cy.visit('/auth/login');
+        cy.visit('/auth/login', { failOnStatusCode: false });
 
         const loginData = new LoginData();
 

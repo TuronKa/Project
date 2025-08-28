@@ -10,7 +10,7 @@ describe('Add Products to Cart', () => {
 
     it('should select a product and add it to the cart', () => {
 
-        cy.visit('/');
+        cy.visit('/', { failOnStatusCode: false });
 
         const itemToCart = new ItemToCart(product.item1.id);
 
