@@ -41,9 +41,9 @@ export default class ItemToCart {
     billingAddress = () => {
         cy.get('[data-test="street"]').should('be.visible').and('have.length', 1);
         cy.get('[data-test="city"]').should('be.visible').and('have.length', 1);
-        cy.get('[data-test="state"]').should('be.visible').and('have.length', 1);
+        cy.get('[data-test="state"]').type('AT');
         cy.get('[data-test="country"]').should('be.visible').and('have.length', 1);
-        cy.get('[data-test="postal_code"]').should('be.visible').and('have.length', 1);
+        cy.get('[data-test="postal_code"]').type('12345');
 
     }
 
