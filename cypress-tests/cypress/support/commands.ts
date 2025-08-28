@@ -42,7 +42,7 @@ Cypress.Commands.add('login', () => {
     const loginData = new LoginData();
 
     cy.fixture('loginUser.env.json').then((user) => {
-        cy.visit('/auth/login');
+
         loginData.loginEmailInput().type(user.email);
         loginData.loginPasswordInput().type(user.password);
         loginData.loginButton().click();
